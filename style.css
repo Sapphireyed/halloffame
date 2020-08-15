@@ -1,0 +1,121 @@
+header {
+  position: fixed;
+  top: -15px;
+  left: 0;
+  background-color: forestgreen;
+  opacity: 0.7;
+  width: 100%;
+  height:9%;
+}
+
+header:hover {
+  opacity: 1;
+} 
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  float: left;
+  padding: 10px 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header li a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 5px;
+}
+
+.active {
+  background-color: darkgreen;
+}
+
+header li:hover {
+  background-color: darkgreen;
+}
+
+.dropmenu {
+  position: relative;
+  display: inline-block;
+}
+
+.menutext {
+  display: none;
+  position: absolute;
+  background-color: forestgreen;
+  margin: 50px 0 0 0;
+}
+
+.dropmenu:hover .menutext {
+  display: block;
+}
+
+.dropmenu:hover .menutext li {
+  font-seize: 18px;
+  font-weight: normal;
+  display: block;
+}
+
+.dropmenu:hover .menutext a {
+  display: block;
+  padding: 2px 25px;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+color: 
+}
+
+h1 {
+text-align: center;
+font-weight: bold;
+font-size: 58px;
+margin-top: 50px;
+}
+
+h2 {
+font-size: 34px;
+}
+
+h3 {
+font-size: 30px;
+}
+
+h4 {
+font-size: 22px;
+}
+
+[class*="col-"] {
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
