@@ -44,6 +44,12 @@ th {
 background-color: #f5f5f5;
 }
 
+.upgrades {
+  padding: 0;
+  margin: 0;
+}
+
+
 @media only screen and (min-width: 768px) {
 .bg {
   background: url('http://rogueadventu.re/wp-content/uploads/2020/08/ra_main_bg.png') #ffffff no-repeat scroll center center;
@@ -70,7 +76,7 @@ background-color: #f5f5f5;
       <li><a href="index.html">Content 3</a></li>
     </div>
   </div>
-  <li><a href="index2.html">blblb</a></li>
+  <li><a href="index.html">Something</a></li>
   </div>
 </ul>
 </nav>
@@ -277,7 +283,8 @@ background-color: #f5f5f5;
 
 <div class="col-6">
 <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_necromancer.png" alt="necromancer" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left; ">
-<div>
+<div class="necroupg" style="background-color: forestgreen; text-align: left; width: 70%">
+<p style="display:inline; font-weight: bold; color: white;">Upgrade</p>
 <button type="button" onclick="flesh()">Flesh</button>
 <button type="button" onclick="bones()">Bones</button>
 <button type="button" onclick="pain()">Pain</button>
@@ -490,16 +497,25 @@ background-color: #f5f5f5;
 <script>
 function flesh() {
   document.getElementById("inf").innerHTML = "23";
+  document.getElementById("player1").innerHTML = "P1/P2";
   document.getElementById("time").innerHTML = "53min";
+  document.getElementById("player2").innerHTML = "P3/P4";
+  document.getElementById("hellscore").innerHTML = "5567";
   document.getElementById("score").innerHTML = "2322";
-  document.getElementById("player").innerHTML = "1";
+  document.getElementById("helltime").innerHTML = "77min";
+  document.getElementById("player3").innerHTML = "P5/P6";
 }
 </script>
 <script>
 function bones() {
   document.getElementById("inf").innerHTML = "21";
+  document.getElementById("player1").innerHTML = "12";
   document.getElementById("time").innerHTML = "58min";
+  document.getElementById("player2").innerHTML = "23";
+  document.getElementById("hellscore").innerHTML = "5567";
   document.getElementById("score").innerHTML = "2234";
+  document.getElementById("helltime").innerHTML = "87min";
+  document.getElementById("player3").innerHTML = "3";
 }
 </script>
 <script>
