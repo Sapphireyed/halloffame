@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css">
-<title>Coming soon</title>
+<title>Contact</title>
 <style>
 
 .bg {
@@ -13,6 +13,11 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+}
+
+.contact {
+  text-align: center;
+  font-size: 22px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -47,12 +52,35 @@
 </nav>
 </header>
 
-<section class="flex">
+<section>
 <div>
-<h1>COMING SOON</h1>
+<h1 style="color: crimson;">CONTACT US</h1>
 </div>
 </section>
-  
+
+<section>
+<form class="contact" action="" target="_blank" method="POST" onsubmit="thankYou()">
+<label for="Name" name="name" value="name">Name</label><br>
+<input type="text" name="name" id="name" required><br><br>
+<label for="email" name="email">E-mail address</label><br>
+<input type="text" name="email" id="email" required><br><br>
+<label for="area" name="Area">Choose the area</label><br>
+<select><br>
+<option value="suggestion">Suggestion</option>
+<option value="bug-report">Bug-report</option>
+<option value="support">Support</option>
+<option value="support">Other</option>
+</select><br>
+<br><label for="comment" name="comment">Leave your message</label><br>
+<textarea name="comment" id="comment" rows="9" cols="50" required minlength="10" onfocus="focusSize()" onblur="blurSize()"></textarea><br><br>
+<p>Would you like to receive game-related notification on your e-mail address?</p>
+<label for="yes" name="yes">Yes</label>
+<input type="radio" name="yes" value="yes" id="yes">
+<label for="no" name="no">No</label>
+<input type="radio" name="no" id="no" value="no"><br>
+<input type="submit" value="Submit" id="submit"><br><br>
+</form>
+</section>
 <footer>
 <div class="col-6" style="float: left">
 <h4 style="margin-top:-4px;">Game made by <a style="color: darkblue; text-weight: bold; text-decoration: none; font-variant: small-caps" href="https://sharklab.org/"><img src="http://rogueadventu.re/wp-content/uploads/2020/03/logo-shark-300x300.png" alt="" "width="37" height="37" style="vertical-align: baseline; margin-bottom: -7px;"><em>SharkLab</a></em></h4>
@@ -66,5 +94,21 @@
 </div>
 </div>
 </footer>
+<script>
+function thankYou() {
+  alert("Thank you for your feedback!");
+  document.getElementById("submit").value = "Thank You!";
+}
+</script>
+<script>
+function focusSize() {
+  document.getElementById("comment").style.fontSize = "18px";
+}
+</script>
+<script>
+function blurSize() {
+  document.getElementById("comment").style.fontSize = "12px";
+}
+</script>
 </body>
 </html>
