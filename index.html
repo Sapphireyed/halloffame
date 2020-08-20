@@ -586,6 +586,15 @@ for (index = 0; index < list.length; ++index) {
     }
   })
 })
+document.querySelectorAll('.tclass').forEach(item => {
+  item.addEventListener('mouseout', event => {
+    var list, index;
+list = document.querySelectorAll(".tclass td:nth-child(1)");
+for (index = 0; index < list.length; ++index) {
+    list[index].style.backgroundColor = "transparent";
+    }
+  })
+})
 </script>
 
 </body>
