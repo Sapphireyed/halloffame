@@ -40,9 +40,6 @@
   background-size: cover;
   }
 }
-
-
-
 </style>
 </head>
 
@@ -74,8 +71,8 @@
 
 <section>
 <div class="col-t-3 container">
-  <img src="Killingtime.PNG" style="width: 400px; height: 380px; margin: 40px 50px 40px 50px;">
-  <div class="top-right" id="kill"></div>
+  <img src="killingtime.png" style="width: 400px; height: 380px; margin: 40px 50px 40px 50px;">
+  <div class="top-right" id="kill" onmouseover="type()"></div>
 </div>
 <div class="col-t-6">
 <form class="contact" action="" target="_blank" method="POST" onsubmit="thankYou()">
@@ -134,10 +131,10 @@ function blurSize() {
 }
 </script>
 <script>
-var myVar = setInterval(type, 100);
-var i = 0;
-var txt = 'Let\'s KILL some monsters!';
-var speed = 600;
+let myVar = setInterval(type, 100);
+let i = 0;
+let txt = 'Let\'s KILL some monsters!';
+let speed = 600;
 
 function type() {
   if (i < 10) {
@@ -146,11 +143,12 @@ function type() {
   } else if (i == 10) {
   document.getElementById("kill").innerHTML += txt.charAt(i) + '<br>';
   i++;
-  } else if (i > 10 || i < txt.length) {
+  } else if (i > 10 && i < txt.length) {
   document.getElementById("kill").innerHTML += txt.charAt(i);
   i++;
   } else {
   document.getElementById("kill").innerHTML = "";
+  i++
   }
 } 
 </script>
