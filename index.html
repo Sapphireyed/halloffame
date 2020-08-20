@@ -27,22 +27,25 @@ margin-top: -10px;
 padding: 20px;
 font-size:22px;
 overflow-x: scroll;
+width: 100%;
 }
 
-.tclass td, th {
-padding: 5px 15px;
+.classimg img {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  float: left;
 }
 
-th {
-  color: forestgreen;
-}
+.tclass td, th {padding: 5px 15px;}
+
+th {color: forestgreen;}
 
 .tclass td:nth-child(1) /* 1st colun */{
   font-weight: bold;
   position: -webkit-sticky;
   position: sticky;
   left: 0;
-  background-color: #e9d5cf;
 }
 
 
@@ -63,7 +66,10 @@ background-color: #f5f5f5;
   }
 
 .decoration { display: inline;}
-.tclass td:nth-child(1) /* 1st colun */{ background-color: transparent}
+.tclass {
+  overflow: auto;
+  width: 70%;
+}
 }
 </style>
 </head>
@@ -72,7 +78,7 @@ background-color: #f5f5f5;
 <header>
 <nav>
 <ul>
-  <li class="logo" style="float:right; margin-right: 100px; padding: 5 0 0 0;"><a href="http://rogueadventu.re/"><img src="http://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo" target="_blank" style="width: 50px; height: 40px;"></a><li>
+  <li class="logo" style="float:right; margin-right: 100px; padding: 5 0 0 0;"><a href="https://rogueadventu.re/"><img src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo" target="_blank" style="width: 50px; height: 40px;"></a><li>
   <div style="float: left">
   <li class="active"><a href="index.html">Hall of Fame</a></li>
   <div class="dropmenu">
@@ -91,7 +97,7 @@ background-color: #f5f5f5;
 
 <div>
 <img clas="decoration" src="https://rogueadventu.re/wp-content/uploads/2020/03/ribbon_deco_laurel_l.png" style="margin-left: 150px; float:left; width: 180px; height: 180px;">
-<img class="decoration" src="http://rogueadventu.re/wp-content/uploads/2020/03/ribbon_deco_laurel_r.png" style="margin-right: 150px; float:right; width: 180px; height: 180px;">
+<img class="decoration" src="https://rogueadventu.re/wp-content/uploads/2020/03/ribbon_deco_laurel_r.png" style="margin-right: 150px; float:right; width: 180px; height: 180px;">
 <h1 class="hall" style="color: crimson;">HALL OF FAME</h1>
 <h3 style="text-align: center; font-size: 22px;">Welcome to Hall of fame.<br>Take a look at all the achievements!<br>Honor best of Rogue Adventurers!</h3>
 </div><br>
@@ -101,7 +107,7 @@ background-color: #f5f5f5;
 
 <div class="col-6 col-t-3">
   <h3 style="text-align: center; color: darkgreen;"><strong>HIGHEST INFERNO</strong></h3>
-  <img class="trophy" src="http://rogueadventu.re/wp-content/uploads/2020/08/highestinf.png" alt="73" aligncenter style="width: 250px; height: 250px; padding: 30px; margin-top: -45px;">
+  <img class="trophy" src="https://rogueadventu.re/wp-content/uploads/2020/08/highestinf.png" alt="73" aligncenter style="width: 250px; height: 250px; padding: 30px; margin-top: -45px;">
   <div class="col-4" style="margin-top: -45px">
     <h4><strong>Class:</strong></h4>
     <h4><strong>Time:</strong></h4>
@@ -115,7 +121,7 @@ background-color: #f5f5f5;
 </div>
 <div class="col-6 col-t-3">
   <h3 style="text-align: center; color: darkgreen;"><strong>BEST TIME</strong></h3>
-  <img class="trophy" src="http://rogueadventu.re/wp-content/uploads/2020/08/highestinf.png" alt="73" aligncenter style="width: 250px; height: 250px; padding: 30px; margin-top: -45px;">
+  <img class="trophy" src="https://rogueadventu.re/wp-content/uploads/2020/08/highestinf.png" alt="73" aligncenter style="width: 250px; height: 250px; padding: 30px; margin-top: -45px;">
  <div class="col-4" style="margin-top: -45px">
     <h4><strong>Class:</strong></h4>
     <h4><strong>Time:</strong></h4>
@@ -160,9 +166,10 @@ background-color: #f5f5f5;
 <section class="classes"> <!-- CLASSES -->
 <h2 style="text-align: center; color: goldenrod;">CLASS ACHIEVEMENTS</h2>
 
-<div class="col-6">
-<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior" style="width: 200px; height: 200px; padding: 30px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -191,10 +198,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="http://rogueadventu.re/wp-content/uploads/2020/03/choose_assassin.png" alt="assassin" style="width: 200px; height: 200px; padding: 30px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_assassin.png" alt="assassin">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -223,10 +232,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="http://rogueadventu.re/wp-content/uploads/2020/03/choose_paladin.png" alt="paladin" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_paladin.png" alt="paladin">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -255,10 +266,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="http://rogueadventu.re/wp-content/uploads/2020/03/choose_wizard.png" alt="wizard" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_wizard.png" alt="wizard">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -287,17 +300,19 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_necromancer.png" alt="necromancer" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left; ">
-<div class="necroupg" style="background-color: forestgreen; text-align: left; width: 70%">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_necromancer.png" alt="necromancer">
+<div class="necroupg" style="background-color: forestgreen; text-align: left; width: 70%; margin-top: -35px;">
 <p style="display:inline; font-weight: bold; color: white;">Upgrade</p>
 <button type="button" onclick="flesh()">Flesh</button>
 <button type="button" onclick="bones()">Bones</button>
 <button type="button" onclick="pain()">Pain</button>
 <button type="button" onclick="blood()">Blood</button>
 </div>
-<table class="tclass" style="clear:both; display: inline">
+<div class="tclass">
+<table style="clear:both; display: inline;">
   <thead>
   <tr>
     <th></th>
@@ -326,10 +341,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="http://rogueadventu.re/wp-content/uploads/2020/03/choose_shaman.png" alt="shaman" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_shaman.png" alt="shaman">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -358,10 +375,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_ranger.png" alt="ranger" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_ranger.png" alt="ranger">
+<div class="tclass">
+<table>
   <thead>
 <tr>
     <th></th>
@@ -390,10 +409,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="http://rogueadventu.re/wp-content/uploads/2020/03/choose_druid.png" alt="druid" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_druid.png" alt="druid">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -422,10 +443,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_engineer.png" alt="engineer" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_engineer.png" alt="engineer">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -454,10 +477,12 @@ background-color: #f5f5f5;
   </tr>
 </table>
 </div>
+</div>
 
-<div class="col-6">
-<img src="http://rogueadventu.re/wp-content/uploads/2020/04/choose_barbarian.png" alt="barbarian" style="width: 200px; height: 200px; padding: 30px; margin-top: -15px; float: left">
-<table class="tclass">
+<div class="col-6 classimg">
+<img src="https://rogueadventu.re/wp-content/uploads/2020/04/choose_barbarian.png" alt="barbarian">
+<div class="tclass">
+<table>
   <thead>
   <tr>
     <th></th>
@@ -485,12 +510,13 @@ background-color: #f5f5f5;
     <td>ttttt</td>
   </tr>
 </table>
+</div>
 </div>
 </section>
 
 <footer>
 <div class="col-6">
-<h4 style="margin-top:-4px;">Game made by <a style="color: darkblue; text-weight: bold; text-decoration: none; font-variant: small-caps" href="https://sharklab.org/"><img src="http://rogueadventu.re/wp-content/uploads/2020/03/logo-shark-300x300.png" alt="" "width="37" height="37" style="vertical-align: baseline; margin-bottom: -7px;"><em>SharkLab</a></em></h4>
+<h4 style="margin-top:-4px;">Game made by <a style="color: darkblue; text-weight: bold; text-decoration: none; font-variant: small-caps" href="https://sharklab.org/"><img src="https://rogueadventu.re/wp-content/uploads/2020/03/logo-shark-300x300.png" alt="" "width="37" height="37" style="vertical-align: baseline; margin-bottom: -7px;"><em>SharkLab</a></em></h4>
 </div>
 <div class="col-6" style="float:right; padding: 0 0; margin-top: -15px;">
 <h4 style="float:right;">Follow us</h4>
@@ -551,11 +577,15 @@ function blood() {
 }
 </script>
 <script>
-col = document.getElementById("inf").onscroll = function() {addBg()};
-
-function addBg() {
-  document.getElementById("inf").style.backgroundColor = "Yforestgreen";
-}
+document.querySelectorAll('.tclass').forEach(item => {
+  item.addEventListener('scroll', event => {
+    var list, index;
+list = document.querySelectorAll(".tclass td:nth-child(1)");
+for (index = 0; index < list.length; ++index) {
+    list[index].style.backgroundColor = "forestgreen";
+    }
+  })
+})
 </script>
 
 </body>
