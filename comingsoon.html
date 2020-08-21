@@ -4,6 +4,7 @@
 
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
 <title>Contact</title>
 <style>
@@ -14,7 +15,7 @@
   background-position: center center;
   background-attachment: fixed;
 }
-
+ 
 .container {
   position: relative;
   text-align: center;
@@ -47,19 +48,21 @@
 
 <header>
 <nav>
-<ul>
-  <li style="float:right; margin-right: 100px; padding: 5px 0 0 0;"><a href="http://rogueadventu.re/"><img src="http://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo" target="_blank" style="width:50px; height 50px;"></a><li>
-  <li><a href="index.html">Hall of Fame</a></li>
+<div class="topnav" id="myTopnav">
+  <a href="https://rogueadventu.re/" class="logo"><img src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo" target="_blank" style="width: 50px; height: 40px;"></a>
+  <a href="index.html">Hall of Fame</a>
+  <a href="comingsoon.html" class="active">Coming Soon</a>
   <div class="dropmenu">
-  <li  class="active"><a href="comingsoon.html">Coming Soon</a></li>
-    <div class="menutext">
-      <li><a href="index.html">Content 1</a></li>
-      <li><a href="index.html">Content 2</a></li>
-      <li><a href="index.html">Content 3</a></li>
+  <a href="index.html">Something</a>
+    <div class="droptext">
+      <a href="index.html">Content 1</a>
+      <a href="index.html">Content 1</a>
+      <a href="index.html">Content 1</a>
     </div>
   </div>
-  <li><a href="index2.html">blblb</a></li>
-</ul>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+</div>
 </nav>
 </header>
 
@@ -72,7 +75,7 @@
 <section>
 <div class="col-t-3 container">
   <img src="Killingtime.png" style="width: 400px; height: 380px; margin: 40px 50px 40px 50px;">
-  <div class="top-right" id="kill" onmouseover="type()"></div>
+  <div class="top-right" id="kill"></div>
 </div>
 <div class="col-t-6">
 <form class="contact" action="" target="_blank" method="POST" onsubmit="thankYou()">
@@ -148,9 +151,10 @@ function type() {
   i++;
   } else {
   document.getElementById("kill").innerHTML = "";
-  i++
+
   }
 } 
 </script>
+<script src="header.js"></script>
 </body>
 </html>

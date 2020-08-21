@@ -7,45 +7,61 @@ body {
   margin: 0;
 }
 
-nav { 
+.topnav {
   position: fixed;
-  top: -15px;
-  left: 0;
+  top:0;
+  background-color: forestgreen;
   opacity: 0.7;
   width: 100%;
+  padding: 0 0 0 50px;
 }
 
-nav:hover {
-  opacity: 1;
-} 
+.topnav:hover {opacity: 1}
 
-header ul {
-  background-color: forestgreen;
-  list-style-type: none;
-}
-
-header li {
-  padding: 10px 15px;
-
-  font-size: 22px;
-  font-weight: bold;
-}
-
-header li a{
-  display: block;
-  color: white;
+.topnav a {
+  float: left;
+  display: none;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 1.250em;
+  font-weight: bold;
+  color: white;
 }
 
-.active {
-  background-color: darkgreen;
+.topnav a.icon {
+  float: right;
+  display: inline;
+  margin-top: -5px;
+  margin-right: 40px;
 }
 
-.logo {
-  padding: 0;
-} 
+a.logo {
+  float:none;
+  display:inline;
+  margin: 0;
+}
 
-header li:hover {
+.topnav.responsive {position: relative;}
+
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+.topnav a.active {
   background-color: darkgreen;
   color: white;
 }
@@ -55,27 +71,18 @@ header li:hover {
   display: inline-block;
 }
 
-.menutext {
+.droptext {
   display: none;
   position: absolute;
   background-color: forestgreen;
-  margin: 0px 0 0 0;
+  top:50px;
+  text-align: center;
 }
 
-.dropmenu:hover .menutext {
+.dropmenu:hover .droptext {
   display: block;
 }
 
-.dropmenu:hover .menutext li {
-  font-seize: 18px;
-  font-weight: normal;
-  display: block;
-}
-
-.dropmenu:hover .menutext a {
-  display: block;
-  padding: 2px 20px;
-}
 
 [class*="col-"] {
   float: left;
@@ -135,18 +142,21 @@ footer {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 
-header li {
-  float: left;
+  .topnav a {
+    float: left;
+    display: block;
+  }
+
+  .topnav a.icon {display:none}
+
+  a.logo {
+    margin-right: 150px;
+    margin-top: 5px;
+    float: right;
+    padding: 0;
+  }
 }
 
-header li a {
-  text-align: center;
-}
-
-.menutext {
-  margin: 45px 0 0 0;
-}
-}
 
 @media only screen and (min-width: 860px) {
   /* For desktop */
