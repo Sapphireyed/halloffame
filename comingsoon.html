@@ -22,12 +22,14 @@
 }
 
 .top-right {
-  font-size: 32px;
+  font-size: 18px;
   color: red;
   font-weight: bold;
   position: absolute;
-  top: 89px;
-  right: -65px;
+  top: 68px;
+  left: 150px;
+  right: -35px;
+  overflow: 
 }
 
 .contact {
@@ -35,11 +37,30 @@
   font-size: 22px;
 }
 
+#killingtime {
+  width: 100%; 
+  height: auto; 
+  margin: 40px 50px 40px 50px;
+ }
+
 @media only screen and (min-width: 768px) {
 .bg {
   background: url('http://rogueadventu.re/wp-content/uploads/2020/08/ra_main_bg.png') #ffffff no-repeat scroll center center;
   background-size: cover;
   }
+
+.top-right {
+  font-size: 32px;
+  top: 82px;
+  left: 250px;
+  right: -55px;
+ }
+
+#killingtime {
+  width: 400px; 
+  height: auto; 
+  margin: 40px 50px 40px 50px;
+ }
 }
 </style>
 </head>
@@ -74,7 +95,7 @@
 
 <section>
 <div class="col-t-3 container">
-  <img src="Killingtime.png" style="width: 400px; height: 380px; margin: 40px 50px 40px 50px;">
+  <img src="Killingtime.png" id="killingtime" onmousemove="type()">
   <div class="top-right" id="kill"></div>
 </div>
 <div class="col-t-6">
