@@ -1,4 +1,3 @@
-
 function thankYou() {
   alert("Thank you for your feedback!");
   document.getElementById("submit").value = "Thank You!";
@@ -12,11 +11,9 @@ function blurSize() {
   document.getElementById("comment").style.fontSize = "12px";
 }
 
-let myVar = setInterval(type, 100);
+let start = setInterval(type, 100);
 let i = 0;
-let txt = 'Let\'s KILL some monsters!';
-let speed = 600;
-
+let txt = 'Let\'s KILL some monsters!             ';
 function type() {
   if (i < 10) {
   document.getElementById("kill").innerHTML += txt.charAt(i);
@@ -29,6 +26,6 @@ function type() {
   i++;
   } else {
   document.getElementById("kill").innerHTML = "";
-
-  }
+  i = 0;
+}
 }
