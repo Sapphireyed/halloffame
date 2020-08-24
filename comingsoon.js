@@ -3,8 +3,13 @@ function thankYou() {
   document.getElementById("submit").value = "Thank You!";
 }
 
-function focusSize() {
-  document.getElementById("comment").style.fontSize = "18px";
+
+document.getElementById("comment").onfocus = focus;
+function focus() {
+  var x = window.matchMedia("(min-width: 700px)")
+  if ( x.matches) {
+    document.getElementById("comment").style.fontSize = "18px";
+  }
 }
 
 function blurSize() {
