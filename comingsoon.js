@@ -29,3 +29,15 @@ function type() {
   i = 0;
 }
 }
+
+$(document).ready(function(){
+  $("#dragon").mouseenter(function(){
+    $("#fire").animate({
+     height: 'toggle'}, "slow");
+  });
+});
+$(function(){
+  $("#dragon").mouseleave(function(){
+    $("#fire").fadeOut("slow");
+ });
+})

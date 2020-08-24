@@ -6,16 +6,18 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <title>Contact</title>
 <style>
-
 .bg {
-  background-image: url('http://rogueadventu.re/wp-content/uploads/2020/08/ra_main_bg.png'); 
+  background-image: url('http://rogueadventu.re/wp-content/uploads/2020/08/ra_main_bg.png');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 }
- 
+
 .container {
   position: relative;
   text-align: center;
@@ -29,8 +31,22 @@
   top: 68px;
   left: 150px;
   right: -35px;
-  overflow: 
 }
+
+.container1 {
+  position: relative;
+  left: 40%;
+}
+
+.bottom-left {
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  display: none;
+}
+
+#spittingfire {width: 60%;}
+
 
 .contact {
   text-align: center;
@@ -61,7 +77,30 @@
   height: auto; 
   margin: 40px 50px 40px 50px;
  }
+
+.container1 {
+  position: relative;
+  margin-top: 40px;
+  left: 0;
 }
+
+.bottom-left {
+  position: absolute;
+  top: 57%;
+  left: -40%;
+  display: none;
+}
+
+#dragon {
+  width: 90%;
+  height: auto;
+  margin: 80px 0 0 -40px;
+}
+
+#spittingfire {width:100%}
+}
+
+
 </style>
 </head>
 
@@ -98,6 +137,7 @@
   <img src="Killingtime.png" id="killingtime">
   <div class="top-right" id="kill"></div>
 </div>
+
 <div class="col-t-6">
 <form class="contact" action="" target="_blank" method="POST" onsubmit="thankYou()">
 <label for="Name" name="name" value="name">Name</label><br>
@@ -121,6 +161,14 @@
 <input type="submit" value="Submit" id="submit"><br><br>
 </form>
 </div>
+
+<div class="col-t-3">
+<div class="container1">
+  <img src="dragon.png" alt="" id="dragon">
+  <div class="bottom-left" id="fire"><img src="fire.png" id="spittingfire"></div>
+</div>
+</div>
+
 
 <div class="col-t-3">
 </div>
