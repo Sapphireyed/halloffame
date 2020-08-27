@@ -31,6 +31,8 @@
   background-size: cover;
   background-position: center center;
 }
+
+.classes [class*="col-"] {float:none}
 .classes img {
   display: block;
   margin-left: auto;
@@ -43,7 +45,15 @@
   font-size: 18px;
   background-color: #c0bd88;
 }
-@media only screen and (min-width: 768px) {
+
+#h1 {display:none;}
+#h1mob {
+  display:block;
+  max-width: 100%;
+}
+#dec1 {display: none}
+#dec2 {display: block}
+@media only screen and (min-width: 600px) {
   .col-t-2 {width: 20%;}
 
   .classes {
@@ -51,6 +61,16 @@
     background-size: cover;
     background-position: center center;
   }
+
+  #h1mob {display: none;}
+  #h1 {
+    display:block;
+    max-width: 100%;
+  }
+  #dec1 {display: block}
+  #dec2 {display: block}
+
+  .classes [class*="col-"] {float:left}
 }
 </style>
 </head>
@@ -77,21 +97,22 @@
 </header>
 
 <div style="background-color:forestgreen; text-align:center;">
-<img src="img/badge_1.png"alt=""style="float:left;margin-left: 100px">
-<img src="img/badge_3.png"alt=""style="float:right;margin-right: 100px;">
-<h1 style="background-color: forestgreen"><img src="img/rah1.png"></h1>
-<h3 style="margin-top: -35px;"><span style="font-size:14px; margin-left: -50px;">Probably</span> THE BEST <br>rogue-like, card, deckbuilding game <br>in history</h3>
+<img id="dec2" src="img/badge_1.png"alt=""style="float:left;margin-left: 100px">
+<img id="dec1" src="img/badge_3.png"alt=""style="float:right;margin-right: 100px;">
+<h1 style="background-color: forestgreen"><img id="h1" src="img/rah1.png" alt="">
+<img id="h1mob" src="img/rah1mob.png"></h1>
+<h3 style="margin-top: -35px;"><span style="font-size:14px; margin-left: -50px;">Probably</span> THE BEST <br>rogue-like, deckbuilding game <br>in history</h3>
 <br><br>
 
 <section class="col-t-12 classes" style="margin-top:-40px;">
 <div>
 <h1 style="text-align:center; color: #d0f335;">Choose 1 out of 10 unique classes"</h1>
-  <div class="col-t-3">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/mage_lesson.png" alt="" style="display:block; margin: 30px 0 0 60px; padding: 30px; width: 90%">
+  <div class="col-t-3" id="mage">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/mage_lesson.png" class="mage" id="mage1" alt="" style="display:block; margin: 30px 0 0 60px; padding: 30px; width: 90%;">
   </div>
   <div class="col-t-9">
   <div class="col-t-4" id="warrior">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior" style="display:block;">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
@@ -134,7 +155,7 @@
   </div>
   </div>
   <div>
-  <div class="col-t-3"id="ranger">
+  <div class="col-t-3" id="ranger">
     <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_ranger.png" alt="ranger">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
