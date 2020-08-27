@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="rogue.js"></script>
+<title>Rogue Adventure Game</title>
+<style>
+.main {
+  background-image: url('https://rogueadventu.re/wp-content/uploads/2020/08/ra_main_bg.png');
+  background-size: cover;
+  background-position: fixed;
+  width: 341px;
+  height: 510px;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+
+#lore {
+  font-size: 22px;
+  padding: 15px 25px;
+  text-align: justify;
+}
+
+.classes {
+  background-image: url("img/tourbgmob.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.classes img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+}
+
+.classes p {
+  display:none;
+  font-size: 18px;
+  background-color: #c0bd88;
+}
+@media only screen and (min-width: 768px) {
+  .col-t-2 {width: 20%;}
+
+  .classes {
+    background-image: url("img/tourbg.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+</style>
+</head>
+
+<body>
+<header>
+<nav>
+<div class="topnav" id="myTopnav">
+  <a href="https://rogueadventu.re/" class="logo"><img src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo" target="_blank" style="width: 50px; height: 40px;"></a>
+  <a href="index.html" >Hall of Fame</a>
+  <a href="comingsoon.html">Coming Soon</a>
+  <div class="dropmenu">
+  <a href="rogueadventure.html" class="active">Something</a>
+    <div class="droptext">
+      <a href="index.html">Content 1</a>
+      <a href="index.html">Content 1</a>
+      <a href="index.html">Content 1</a>
+    </div>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+</div>
+</nav>
+</header>
+
+<div style="background-color:forestgreen; text-align:center;">
+<img src="img/badge_1.png"alt=""style="float:left;margin-left: 100px">
+<img src="img/badge_3.png"alt=""style="float:right;margin-right: 100px;">
+<h1 style="background-color: forestgreen"><img src="img/rah1.png"></h1>
+<h3 style="margin-top: -35px;"><span style="font-size:14px; margin-left: -50px;">Probably</span> THE BEST <br>rogue-like, card, deckbuilding game <br>in history</h3>
+<br><br>
+
+<section class="col-t-12 classes" style="margin-top:-40px;">
+<div>
+<h1 style="text-align:center; color: #d0f335;">Choose 1 out of 10 unique classes"</h1>
+  <div class="col-t-3">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/mage_lesson.png" alt="" style="display:block; margin: 30px 0 0 60px; padding: 30px; width: 90%">
+  </div>
+  <div class="col-t-9">
+  <div class="col-t-4" id="warrior">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-4" id="assassin">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_assassin.png" alt="assassin">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-4" id="paladin">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_paladin.png" alt="paladin">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-4" id="wizard">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_wizard.png" alt="wizard">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-4"id="necromancer">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_necromancer.png" alt="necromancer">
+    <p class="war"><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p class="war"><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-4" id="shaman">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_shaman.png" alt="shaman">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  </div>
+  <div>
+  <div class="col-t-3"id="ranger">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_ranger.png" alt="ranger">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-3" id="druid">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_druid.png" alt="druid">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-3" id="engineer">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_engineer.png" alt="engineer">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+  <div class="col-t-3" id="barbarian">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/04/choose_barbarian.png" alt="barbarian">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+  </div>
+</div>
+</div>
+</section>
+<!--
+<section>
+<div class="col-t-9">
+
+</div>
+<div class="col-t-3 main">
+<p id="lore">I woke up in the dark. Darkness black and dense as ink sourrendered me and it made me feel dizzy. Or was it caused by something else? Wait, where am I?!<br><br>
+Think, Think.... what's my name? <br><br>
+There! I can see light! <br><br>
+“When you see light don't go there” she told me. Who? I can't remember her face but I remember her voice. She laughed. “Don't go to the light, we'll meet in hell” she promised.
+It doesn't look like hell, though. Nor like heaven. Im lost nad confused and I have to learn what happened. Who am I and where am I. <br><br>
+So light. <br><br>
+Let's go to the light.</p>
+</div>
+</section>
+-->
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<script src="header.js"></script>
+</body>
+</html>
