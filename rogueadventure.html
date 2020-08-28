@@ -46,6 +46,9 @@
   background-color: #c0bd88;
 }
 
+.worlds {display: none;}
+
+.explore {background-color: forestgreen}
 #h1 {display:none;}
 #h1mob {
   display:block;
@@ -53,6 +56,11 @@
 }
 #dec1 {display: none}
 #dec2 {display: block}
+
+.all button {
+  width: 50%;
+  padding: 100px 0;
+}
 @media only screen and (min-width: 600px) {
   .col-t-2 {width: 20%;}
 
@@ -112,7 +120,7 @@
   </div>
   <div class="col-t-9">
   <div class="col-t-4" id="warrior">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior" style="display:block;">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
@@ -186,12 +194,62 @@
 </div>
 </div>
 </section>
-<!--
-<section>
-<div class="col-t-9">
 
+<section class="explore" style="background-color:forestgreen">
+  <div class="col-t-4" style="padding:0 75px; margin-top: -20px">
+    <h2 style="text-align:center; color: #d0f335; font-size: 40px">Explore seven wonderful realms</h2>
+    <div style="margin-top:-20px">
+      <img src="http://rogueadventu.re/wp-content/uploads/2020/03/lost-map.jpg" alt"example map" style=" width: 100%; height: auto;">
+    </div>
+  </div>
+<div class="col-t-8" style="margin-top: 60px">
+  <div id="#all" class="all">
+  <button type="button" id="forestbtn" value="All" style="background-image: url('img/lostworld.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#27bd45"></butoon>
+  <button type="button" id="forestbtn" value="Enchented Forest" style="background-image: url('img/dragonsland.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#3f48cc"></butoon>
+  <button type="button" id="waterbtn" value="Deep Water" style="background-image: url('img/lostworld.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#27bd45"></butoon>
+  <button type="button" id="desertbtn" value="The Desert" style="background-image: url('img/dragonsland.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#3f48cc"></butoon>
+  <button type="button" id="lostbtn" value="Lost World" style="background-image: url('img/lostworld.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#27bd45"></butoon>
+  <button type="button" id="volcanobtn" value="Volcano" style="background-image: url('img/volcano.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#3f48cc"></butoon>
+  <button type="button" id="undeadbtn" value="Reign of Dead" style="background-image: url('img/undead.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#41303a"></butoon>
+  <button type="button" id="dragonsbtn" value="Land of Dragons" style="background-image: url('img/dragonsland.png');
+  background-size:contain;background-repeat:no-repeat; background-color:#3f48cc"></butoon>
+  </div>
+  <div class="allsmall" style="display: none;">
+  <button type="button" id="forestbtn" value="All">All</butoon>
+  <button type="button" id="forestbtn" value="Enchented Forest">Enchented Forest</butoon>
+  <button type="button" id="waterbtn" value="Deep Water">Deep Water</butoon><br><div></div>
+  <button type="button" id="desertbtn" value="The Desert">The Desert</butoon>
+  <button type="button" id="volcanobtn" value="Volcano">Volcano</butoon>
+  <button type="button" id="lostbtn" value="Lost World">Lost World</butoon>
+  <button type="button" id="undeadbtn" value="Reign of Dead">Reign of Dead</butoon>
+  <button type="button" id="dragonsbtn" value="Land of Dragons">Land of Dragons</butoon>
+  </div>
+
+<div class="chosen">
+  <div id="forest" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_forest.jpg')"><span>gsgsrhsrhdhs</span></div>
+  <div id="water" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_water.jpg');"><span>gsgsrhsrhdhs</span></div>
+  <div id="desert" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_desert.jpg');"><span>gsgsrhsrhdhs</span></div>
+  <div id="volcano" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_volcano.jpg');"><span>gsgsrhsrhdhs</span></div>
+  <div id="lost" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_lostworld.jpg');"><span>gsgsrhsrhdhs</span></div>
+  <div id="undead" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_reignofdead.jpg');"><span>gsgsrhsrhdhs</span></div>
+  <div id="dragons" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_landofdragons.jpg');"><span>gsgsrhsrhdhs</span></div>
 </div>
-<div class="col-t-3 main">
+</div>
+
+</section>
+
+<br>
+<br>
+<br>
+<!--
+<div class="col-t-3 main" style="right:0">
 <p id="lore">I woke up in the dark. Darkness black and dense as ink sourrendered me and it made me feel dizzy. Or was it caused by something else? Wait, where am I?!<br><br>
 Think, Think.... what's my name? <br><br>
 There! I can see light! <br><br>
@@ -200,17 +258,21 @@ It doesn't look like hell, though. Nor like heaven. Im lost nad confused and I h
 So light. <br><br>
 Let's go to the light.</p>
 </div>
-</section>
 -->
-<br>
-<br>
-<br>
-
-
-
-
-
-
+<footer>
+<div class="col-6" style="float: left">
+<h4 style="margin-top:-4px;">Game made by <a style="color: darkblue; text-weight: bold; text-decoration: none; font-variant: small-caps" href="https://sharklab.org/">
+  <img src="http://rogueadventu.re/wp-content/uploads/2020/03/logo-shark-300x300.png" alt="" width="37" height="37" style="vertical-align: baseline; margin-bottom: -7px;"><em>SharkLab</a></em></h4>
+</div>
+<div class="col-6" style="float:right; padding: 0 0; margin-top: -15px;">
+<h4 style="float:right;">Follow us</h4>
+<div class="btn-gr" style="float: right; clear:both; margin-top: -25px;">
+  <a href="https://www.facebook.com/RogueAdventureGame" target="_blank"><img src="fbicon.png" alt="facebook" style="width: 40px; height: 40px;"></a>
+  <a href="https://discord.gg/QVcnPRv" target="_blank"><img src="discicon.png" alt="discord" style="width: 40px; height: 40px;"></a>
+  <a href="https://twitter.com/rogue_adventure" target="_blank"><img src="twiticon.png" alt="twitter" style="width: 40px; height: 40px;"></a>
+</div>
+</div>
+</footer>
 <script src="header.js"></script>
 </body>
 </html>

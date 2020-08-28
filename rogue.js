@@ -18,3 +18,33 @@ function change() {
       }
     }
     setInterval(change, 2000);
+
+
+$(document).ready(function(){
+  $("button").each(function() {
+    $(this).on('click', function() {
+      $(".all").hide();
+      $(".allsmall").show();
+      $(".worlds").hide();
+      if ($(this).val() == "Enchented Forest") {
+        $("#forest").show();
+      } else if ($(this).val() == "Deep Water") {
+        $("#water").show();
+      } else if ($(this).val() == "The Desert") {
+        $("#desert").show();
+      } else if ($(this).val() == "Volcano") {
+        $("#volcano").show();
+      } else if ($(this).val() == "Lost World") {
+        $("#lost").show();
+      } else if ($(this).val() == "Reign of Dead") {
+        $("#undead").show();
+      } else if ($(this).val() == "Land of Dragons") {
+        $("#dragons").show();
+      } else {
+        $(".all").show();
+        $(".allsmall").hide();
+
+      }
+    })
+  })
+})
