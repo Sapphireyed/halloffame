@@ -1,6 +1,14 @@
 $(document).ready(function(){
-  $("#warrior, #assassin, #paladin, #wizard, #necromancer, #shaman, #ranger, #druid, #engineer, #barbarian").hover(function(){
-    $("p", this).toggle();
+  $("#warrior, #assassin, #wizard, #necromancer, #shaman, #ranger, #druid, #engineer, #barbarian, #paladin").mouseenter(function(){
+    $("img", this).width(50);
+    $("p", this).show();
+  });
+});
+
+$(document).ready(function(){
+  $("#warrior, #assassin, #wizard, #necromancer, #shaman, #ranger, #druid, #engineer, #barbarian, #paladin").mouseleave(function(){
+    $("img", this).width(150);
+    $("p", this).hide();
   });
 });
 
@@ -26,7 +34,7 @@ $(document).ready(function(){
       $(".all").hide();
       $(".allsmall").show();
       $(".worlds").hide();
-      if ($(this).val() == "Enchented Forest") {
+      if ($(this).val() == "Enchanted Forest") {
         $("#forest").show();
       } else if ($(this).val() == "Deep Water") {
         $("#water").show();
