@@ -14,22 +14,22 @@ $(document).ready(function(){
 
 
 function change() {
-      var i = 0;
-      let pics = ["img/mage_lesson.png", "img/mage_sword.png", "img/mage_potion.png"];
-      var el = document.getElementById('mage1');
-      let pic= pics[Math.floor(Math.random() * pics.length)]
-      if (i < pics.length) {
-        el.src = pic;
-        i++;
-      } else {
-        i = 0;
-      }
-    }
-    setInterval(change, 2000);
+  var i = 0;
+  let pics = ["img/mage_lesson.png", "img/mage_sword.png", "img/mage_potion.png"];
+  var el = document.getElementById('mage1');
+  let pic= pics[Math.floor(Math.random() * pics.length)]
+  if (i < pics.length) {
+    el.src = pic;
+    i++;
+  } else {
+    i = 0;
+  }
+}
+setInterval(change, 2000);
 
 
 $(document).ready(function(){
-  $("button").each(function() {
+  $(".all button, .allsmall button").each(function() {
     $(this).on('click', function() {
       $(".all").hide();
       $(".allsmall").show();
@@ -51,8 +51,41 @@ $(document).ready(function(){
       } else {
         $(".all").show();
         $(".allsmall").hide();
-
       }
     })
+  })
+})
+
+
+
+  let maps = ["http://rogueadventu.re/wp-content/uploads/2020/03/lost-map.jpg",
+  "http://rogueadventu.re/wp-content/uploads/2020/03/w4-map.jpg",
+  "http://rogueadventu.re/wp-content/uploads/2020/03/desert-map-1.jpg",
+  "http://rogueadventu.re/wp-content/uploads/2020/02/mix-map.png"];
+  let i = 0;
+
+function next() {
+  if (i == 15) {
+    document.getElementById("map").src = maps[i];
+  } else if (i < (maps.length-1)) {
+    document.getElementById("map").src = maps[(i+1)];
+    i++
+  }
+}
+function prev() {
+  if (i == 0) {
+    document.getElementById("map").src = maps[0];
+  } else if (i < (maps.length)) {
+    document.getElementById("map").src = maps[(i-1)];
+    i--;
+  }
+}
+
+
+
+$(document).ready(function() {
+  $("#prev").on("click", function() {
+    $('img',this).css({"display": "none"})
+    $(".maps").next().css({"display": "block"});
   })
 })
