@@ -80,12 +80,3 @@ function prev() {
     i--;
   }
 }
-
-
-
-$(document).ready(function() {
-  $("#prev").on("click", function() {
-    $('img',this).css({"display": "none"})
-    $(".maps").next().css({"display": "block"});
-  })
-})
