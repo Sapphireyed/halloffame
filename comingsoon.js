@@ -3,7 +3,7 @@ function thankYou() {
   document.getElementById("submit").value = "Thank You!";
 }
 
-
+// textearea changes size on focus and blur. On big screen only, not needed on small
 document.getElementById("comment").onfocus = focus;
 function focus() {
   var x = window.matchMedia("(min-width: 700px)")
@@ -16,6 +16,7 @@ function blurSize() {
   document.getElementById("comment").style.fontSize = "12px";
 }
 
+// typing effect plus changing quotes for assassin in the bubble
 let i = 0;
 let txt0 = 'Let\'s KILL some monsters!             ';
 let txt1 = 'Killing is my game!              ';
@@ -41,6 +42,7 @@ function type() {
 }
 }
 
+// fire effect on hovering on dragon picture
 $(document).ready(function(){
   $("#dragon").mouseenter(function(){
     $("#fire").animate({

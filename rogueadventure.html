@@ -26,6 +26,7 @@
   text-align: justify;
 }
 
+/* section classes */
 .classes {
   background-image: url("img/tourbgmob.jpg");
   background-size: cover;
@@ -42,16 +43,32 @@
 
 .classes p {
   display:none;
-  font-size: 18px;
+  font-size: 17px;
   background-color: #c0bd88;
 }
 
+/* section worlds */
 .worlds {
   display: none;
-  background-size: cover
+  background-size: cover;
 }
 
-.explore {background-color: forestgreen}
+.explore {
+  background-color: forestgreen;
+  display: table;
+  width: 100%;
+}
+
+.all button {
+  width: 100%;
+  padding:0;
+}
+
+.chosen {
+  color: white;
+}
+
+/* headings and decorations */
 #h1 {display:none;}
 #h1mob {
   display:block;
@@ -60,28 +77,37 @@
 #dec1 {display: none}
 #dec2 {display: block}
 
-.all button {
-  width: 100%;
-  padding:0;
-}
 
-.allsmall {margin-top: -30px}
-.chosen {margin-top: -55px}
-
+/*bigscreen */
 @media only screen and (min-width: 600px) {
-  .col-t-2 {width: 20%;}
 
+/* section classes */
   .classes {
     background-image: url("img/tourbg.jpg");
     background-size: cover;
     background-position: center center;
   }
 
+  .classes [class*="col-"] {float:left}
+
+  /* section worlds */
   .all button {
     width: 50%;
     padding: 0;
   }
 
+  .chosen h1 {margin-bottom:-30px;}
+
+  .allsmall {
+    margin-top: -40px;
+  }
+
+  .worlds {
+    margin-top: -35px;
+    margin-left: 50px;
+  }
+
+/*headings and decorations */
   #h1mob {display: none;}
   #h1 {
     display:block;
@@ -90,7 +116,6 @@
   #dec1 {display: block}
   #dec2 {display: block}
 
-  .classes [class*="col-"] {float:left}
 }
 </style>
 </head>
@@ -126,100 +151,103 @@
 
 <section class="col-t-12 classes" style="margin-top:-40px;">
 <div>
-<h1 style="text-align:center; color: #d0f335;">Choose 1 out of 10 unique classes"</h1>
+<h1 style="text-align:center; color: #ffca18;">Choose 1 out of 10 unique classes"</h1>
   <div class="col-t-3" id="mage">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/mage_lesson.png" class="mage" id="mage1" alt="" style="display:block; margin: 30px 0 0 60px; padding: 30px; width: 90%;">
+    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/mage_lesson.png"
+      class="mage" id="mage1" alt="" style="display:block; margin: 30px 0 0 60px; padding: 30px; width: 90%;">
   </div>
   <div class="col-t-9">
-  <div class="col-t-4" id="warrior">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior">
-    <div style="background-color: #c0bd88">
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
-      <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
-      <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+    <div class="col-t-4" id="warrior">
+      <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png" alt="warrior">
+      <div style="background-color: #c0bd88">
+      <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
+        <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
+      <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
+        <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
+      </div>
     </div>
-  </div>
   <div class="col-t-4" id="assassin">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_assassin.png" alt="assassin">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_assassin.png" alt="assassin">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
   <div class="col-t-4" id="paladin">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_paladin.png" alt="paladin">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_paladin.png" alt="paladin">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
+  </div>
+  <div class="col-t-9">
   <div class="col-t-4" id="wizard">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_wizard.png" alt="wizard">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_wizard.png" alt="wizard">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
   <div class="col-t-4"id="necromancer">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_necromancer.png" alt="necromancer">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_necromancer.png" alt="necromancer">
     <div style="background-color: #c0bd88">
     <p class="war"><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p class="war"><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p class="war"><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
   <div class="col-t-4" id="shaman">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_shaman.png" alt="shaman">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_shaman.png" alt="shaman">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
   </div>
   <div>
   <div class="col-t-3" id="ranger">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_ranger.png" alt="ranger">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_ranger.png" alt="ranger">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
   <div class="col-t-3" id="druid">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_druid.png" alt="druid">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_druid.png" alt="druid">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
   <div class="col-t-3" id="engineer">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_engineer.png" alt="engineer">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/03/choose_engineer.png" alt="engineer">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
   <div class="col-t-3" id="barbarian">
-    <img src="https://rogueadventu.re/wp-content/uploads/2020/04/choose_barbarian.png" alt="barbarian">
+    <img class="classpic" src="https://rogueadventu.re/wp-content/uploads/2020/04/choose_barbarian.png" alt="barbarian">
     <div style="background-color: #c0bd88">
     <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior.png" alt="">
       <strong>Base:</strong> Every time you play a combat card, gain 1 Shield</p>
-    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt-"">
+    <p><img src="https://rogueadventu.re/wp-content/uploads/2020/03/skill_warrior_upgrade.png" alt="">
       <strong>Upgrade:</strong> After you block an enemy attack, gain 3 Resistance until the end of your turn.</p>
     </div>
   </div>
@@ -227,14 +255,14 @@
 </div>
 </section>
 
-<section class="explore" style="background-color:forestgreen;">
-  <h1 style="text-align:center; color: #d0f335;">Explore seven wonderful realms</h1>
-  <div class="col-t-4" style="padding:0 65px;" class="nextprev">
+<section class="explore">
+  <h1 style="text-align:center; color: #ffca18;">Explore seven wonderful realms</h1>
+  <div class="col-t-4 nextprev expworld" style="padding:0 65px;">
       <img src="http://rogueadventu.re/wp-content/uploads/2020/03/lost-map.jpg" alt"example map" id="map" style=" width: 100%; height: auto;">
       <button type="button" id='prev' class='prev' onclick="prev()"><</button>
       <button type="button" id='next'onclick="next()">></button>
   </div>
-<div class="col-t-8">
+<div class="col-t-8 expworld">
   <div id="#all" class="all" style="margin-top:-21px;">
   <button type="button" id="forestbtn" value="All" style="background-image: url('img/lostworld.png');
   background-size:contain;background-repeat:no-repeat; background-color:#2b3553">
@@ -272,39 +300,44 @@
   <button type="button" id="undeadbtn" value="Reign of Dead">Reign of Dead</butoon>
   <button type="button" id="dragonsbtn" value="Land of Dragons">Land of Dragons</butoon>
   </div>
+</div>
 
-<div class="chosen">
-  <div id="forest" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_forest.jpg')">
-    <h1 style="color: white;">Enchanted Forest</h1>
+<dic class="chosen">
+<div id="forest" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_forest.jpg')">
+  <h1 style="color: white;">Enchanted Forest</h1>
+</div>
+<div id="water" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_water.jpg');">
+  <h1 style="color: white;">Deep Water</h1>
+</div>
+<div id="desert" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_desert.jpg');">
+  <h1 style="color: white;">The Desert</h1>
+</div>
+<div id="volcano" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_volcano.jpg');">
+  <h1 style="color: white;">Volcano</h1>
+</span></div>
+<div id="lost" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_lostworld.jpg');">
+  <h1 style="color: white;">Lost World</h1>
+</div>
+<div id="undead" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_reignofdead.jpg');">
+  <h1 style="color: white;">Reign of the Dead</h1>
+</div>
+<div id="dragons" class="col-t-7 worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_landofdragons.jpg');">
+    <h1>Land of Dragons</h1>
+  <div class="col-t-3">
+    <h3>Beautigul</h3>
+    <img src="img/enemies/fury.png">
   </div>
-  <div id="water" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_water.jpg');">
-    <h1 style="color: white;">Deep Water</h1>
-  </div>
-  <div id="desert" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_desert.jpg');">
-    <h1 style="color: white;">The Desert</h1>
-  </div>
-  <div id="volcano" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_volcano.jpg');">
-    <h1 style="color: white;">Volcano</h1>
-  </span></div>
-  <div id="lost" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_lostworld.jpg');">
-    <h1 style="color: white;">Lost World</h1>
-  </div>
-  <div id="undead" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_reignofdead.jpg');">
-    <h1 style="color: white;">Reign of the Dead</h1>
-  </div>
-  <div id="dragons" class="worlds" style="background-image: url('https://rogueadventu.re/wp-content/uploads/2020/03/back_landofdragons.jpg');">
-    <h1 style="color: white;">Land of Dragons</h1>
+  <div class="col-t-6">
 
-
+    <img src="img/deadlydang.png" style="max-width: 90%; margin-top: 37px;">
+  </div>
+  <div class="col-t-3">
+     <h2>Magnificient</h2>
   </div>
 </div>
 </div>
-
 </section>
 
-<br>
-<br>
-<br>
 <!--
 <div class="col-t-3 main" style="right:0">
 <p id="lore">I woke up in the dark. Darkness black and dense as ink sourrendered me and it made me feel dizzy. Or was it caused by something else? Wait, where am I?!<br><br>

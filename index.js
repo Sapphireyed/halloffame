@@ -1,4 +1,5 @@
-
+// display apropriate values in the table with bestachievements for particular
+// necromancer upgrades
 function flesh() {
   document.getElementById("inf").innerHTML = "23";
   document.getElementById("player1").innerHTML = "P1/P2";
@@ -44,6 +45,9 @@ function blood() {
   document.getElementById("player3").innerHTML = "3";
 }
 
+// on small screens the table gets scroll effect to see all columns.
+// Function below makes 1st column sticky to make it easier to read what the values refer to
+// Also when sticky first column gets a background. Otherwise it would be difficlt to read it when overlapping with next columns
 document.querySelectorAll('.tclass').forEach(item => {
   item.addEventListener('scroll', event => {
     var list, index;
@@ -63,6 +67,7 @@ for (index = 0; index < list.length; ++index) {
   })
 })
 
+// search for table
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();

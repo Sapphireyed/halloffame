@@ -1,18 +1,19 @@
+// hide and displat class abilities on mouseenter/mouseleave
 $(document).ready(function(){
-  $("#warrior, #assassin, #wizard, #necromancer, #shaman, #ranger, #druid, #engineer, #barbarian, #paladin").mouseenter(function(){
-    $("img", this).width(50);
+  $("#warrior, #assassin, #paladin, #wizard, #necromancer, #shaman, #ranger, #druid, #engineer, #barbarian").mouseenter(function(){
+    $("img.classpic", this).hide();
     $("p", this).show();
   });
 });
 
 $(document).ready(function(){
   $("#warrior, #assassin, #wizard, #necromancer, #shaman, #ranger, #druid, #engineer, #barbarian, #paladin").mouseleave(function(){
-    $("img", this).width(150);
+    $("img.classpic", this).show();
     $("p", this).hide();
   });
 });
 
-
+// automatic changing mage picture ant even intervals
 function change() {
   var i = 0;
   let pics = ["img/mage_lesson.png", "img/mage_sword.png", "img/mage_potion.png"];
@@ -27,7 +28,8 @@ function change() {
 }
 setInterval(change, 2000);
 
-
+// displayingparticularworldsection after clickingon a big button plus small
+// buttonsto navigate betweenworlds. On 'All' back  todisplayingbig worlds buttons
 $(document).ready(function(){
   $(".all button, .allsmall button").each(function() {
     $(this).on('click', function() {
@@ -58,10 +60,11 @@ $(document).ready(function(){
 
 
 
+// worlds map gallery, change picture on next " > " and prev " < " button
   let maps = ["http://rogueadventu.re/wp-content/uploads/2020/03/lost-map.jpg",
   "http://rogueadventu.re/wp-content/uploads/2020/03/w4-map.jpg",
   "http://rogueadventu.re/wp-content/uploads/2020/03/desert-map-1.jpg",
-  "http://rogueadventu.re/wp-content/uploads/2020/02/mix-map.png"];
+  "img/w1mixti.jpg"];
   let i = 0;
 
 function next() {
